@@ -1,0 +1,14 @@
+﻿<Window x:Class="ShowListContentInList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wm="clr-namespace:ShowListContentInList"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <wm:VM x:Key="viewModel"></wm:VM>
+    </Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource viewModel}}">
+        <DataGrid ItemsSource="{Binding ObjectList}">
+            
+        </DataGrid>
+    </Grid>
+</Window>
